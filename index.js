@@ -1,7 +1,7 @@
 const express = require("express");
 const app = express();
 const bodyParser = require("body-parser");
-var nodemailer = require("nodemailer");
+const axios = require("axios");
 require("dotenv").config();
 
 var router = express.Router();
@@ -31,31 +31,17 @@ const listener = app.listen(process.env.PORT || 3000, () => {
 });
 
 function handleSayHello(req, res) {
-  console.log(process.env.GMAIL_USER);
-  let mailOpts, smtpTrans;
-  const name = req.body.name;
-  smtpTrans = nodemailer.createTransport({
-    host: "smtp.gmail.com",
-    port: 465,
-    secure: true,
-    auth: {
-      user: process.env.GMAIL_USER,
-      pass: process.env.GMAIL_PASS
-    }
-  });
-  mailOpts = {
-    from: name + " &lt;" + req.body.email + "&gt;",
-    to: process.env.GMAIL_USER,
-    subject: `${name} - Minggas Website`,
-    text: `${name} (${req.body.email}) says: ${req.body.message}`
-  };
-  smtpTrans.sendMail(mailOpts, function(error, response) {
-    if (error) {
-      res.render("contact-failure");
-    } else {
-      res.render("contact", {
-        name: name
-      });
-    }
+  axios.post(`https://formcarry.com/s/9NuF8VICPWm`, {
+    email: req.body.email,
+    name: req.body.name,
+    message: req.body.message
+  })
+  .then(function (response) {
+    res.render("contact", {
+      name: req.body.name
+    });
+  })
+  .catch(function (error) {
+    res.render("contact-failure");
   });
 }
