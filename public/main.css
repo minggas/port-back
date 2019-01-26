@@ -517,7 +517,8 @@ header .main-text-header span {
   display: flex;
   flex-direction: column;
   margin: 1rem 2.5rem;
-  padding: 1rem
+  padding: 1rem;
+  color: #ccc;
 }
 
 .contact-form input[type="submit"] {
@@ -529,7 +530,7 @@ header .main-text-header span {
   padding: 1rem 2rem;
   background-color: #465a72;
   border: 1px solid #1f2833;
-  color: #ccc
+  
 }
 
 .contact-form input[type="submit"]:hover {
@@ -569,30 +570,33 @@ html {
 
 body {
   background-color: #1f2833;
-  overflow-x: hidden
+  overflow-x: hidden;
 }
 
 li {
-  list-style: none
+  list-style: none;
 }
 
 a {
-  text-decoration: none
+  text-decoration: none;
+  font-weight: bolder;
+  font-size: 110%;
+  color: inherit;
 }
 
 h2 {
   color: #64fcf2;
   font-size: calc(20px + 1.5vw);
-  letter-spacing: 3px
+  letter-spacing: 3px;
 }
 
 .skills,
 .contact {
-  padding: 2%
+  padding: 2%;
 }
 
 textarea {
-  resize: none
+  resize: none;
 }
 
 footer {
@@ -603,7 +607,7 @@ footer {
   padding: 2%;
   background: black;
   color: #ccc;
-  margin-top: 30px
+  margin-top: 30px;
 }
 
 @media screen and (min-width:1171px) {
@@ -611,10 +615,10 @@ footer {
     flex-direction: column;
     margin-top: -50px;
     flex-direction: column;
-    padding: 0 5% 10%
+    padding: 0 5% 10%;
   }
   .skills ul {
-    grid-template-columns: repeat(7, minmax(0, 1fr))
+    grid-template-columns: repeat(7, minmax(0, 1fr));
   }
 }
 
@@ -623,35 +627,35 @@ footer {
     flex-direction: column;
     margin-top: -50px;
     flex-direction: column;
-    padding: 0 5% 10%
+    padding: 0 5% 10%;
   }
   .skills ul {
-    grid-template-columns: repeat(7, minmax(0, 1fr))
+    grid-template-columns: repeat(7, minmax(0, 1fr));
   }
 }
 
 @media screen and (max-width:768px) {
   .about {
     grid-template-areas: 'card1 card2' 'card3 card4' 'portrait text';
-    grid-template-columns: 1fr 1fr
+    grid-template-columns: 1fr 1fr;
   }
   .portfolio {
-    flex-direction: column
+    flex-direction: column;
   }
   .portfolio .project-tile.active h2 {
-    padding-top: 0
+    padding-top: 0;
   }
   .skills ul {
-    grid-template-columns: repeat(5, minmax(0, 1fr))
+    grid-template-columns: repeat(5, minmax(0, 1fr));
   }
 }
 
 @media screen and (max-width:500px) {
   .about {
     grid-template-areas: 'card1' 'card2' 'card3' 'card4' 'portrait' 'portrait' 'text' 'text';
-    grid-template-columns: 1fr
+    grid-template-columns: 1fr;
   }
   .skills ul {
-    grid-template-columns: repeat(3, minmax(0, 1fr))
+    grid-template-columns: repeat(3, minmax(0, 1fr));
   }
 }
