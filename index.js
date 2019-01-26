@@ -2,12 +2,14 @@ const express = require("express");
 const app = express();
 const bodyParser = require("body-parser");
 const axios = require("axios");
+const helmet = require("helmet");
 require("dotenv").config();
 
 var router = express.Router();
 
 //router.post("/", handleSayHello);
 
+app.use(helmet());
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
 
