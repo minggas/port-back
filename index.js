@@ -5,10 +5,6 @@ const axios = require("axios");
 const helmet = require("helmet");
 require("dotenv").config();
 
-var router = express.Router();
-
-//router.post("/", handleSayHello);
-
 app.use(helmet());
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
@@ -30,6 +26,7 @@ app.use(function forceLiveDomain(req, res, next) {
 app.set("view engine", "pug");
 
 app.get("/", (req, res) => {
+  res.set('Cache-Control', 'public, max-age=31557600');
   res.sendFile(__dirname + "/views/index.html");
 });
 
@@ -53,6 +50,7 @@ function handleSayHello(req, res) {
     message: req.body.message
   })
   .then(function (response) {
+    res.set('Cache-Control', 'public, max-age=31557600');
     res.render("contact", {
       name: req.body.name
     });

@@ -4,7 +4,7 @@
   function a() {
     var j = document.body.clientWidth;
     700 > j
-      ? (f.classList.add("mobile"), g.classList.add("mobile"), console.log(j))
+      ? (f.classList.add("mobile"), g.classList.add("mobile"))
       : f.classList.contains("mobile") &&
         g.classList.contains("mobile") &&
         (f.classList.remove("mobile"), g.classList.remove("mobile"));
