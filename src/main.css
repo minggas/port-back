@@ -530,12 +530,11 @@ header .main-text-header span {
   padding: 1rem 2rem;
   background-color: #465a72;
   border: 1px solid #1f2833;
-  
+  color: #ccc;
 }
 
 .contact-form input[type="submit"]:hover {
-  background-color: #64fcf2;
-  color: #ccc;
+  background-color: #64fcf2;  
   border: 1px solid black
 }
 
