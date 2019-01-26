@@ -1,0 +1,9 @@
+{
+ 
+  "manifest_version": 1,
+  "name": "Minggas",
+  "version": "1.0.1",
+  "default_locale": "en",
+  "description": "I'm a Front End Developer from Brazil. Here you can find informations about me and my projects."
+  
+}

@@ -1,4 +1,8 @@
-@import url(https://fonts.googleapis.com/css?family=Alegreya+Sans+SC);
+@font-face {
+ font-family: 'Alegreya Sans SC';
+ font-display: block;
+ src: local('Alegreya'), url("https://fonts.gstatic.com/s/alegreyasanssc/v8/mtGh4-RGJqfMvt7P8FUr0Q1j-Hf1Bkll9w5DPYo.woff2") format('woff2');
+}
 .nav-bar {
   padding: 1rem 3%;
   width: 100%;
