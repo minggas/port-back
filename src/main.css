@@ -535,7 +535,7 @@ header .main-text-header span {
 
 .contact-form input[type="submit"]:hover {
   background-color: #64fcf2;
-  color: #333;
+  color: #ccc;
   border: 1px solid black
 }
 
