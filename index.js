@@ -10,19 +10,6 @@ app.use(helmet());
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
 app.use(compression());
-app.use(function forceLiveDomain(req, res, next) {  
-  var host = req.get('Host');
-  if (host === 'http://minggas.com') {
-    return res.redirect(301, 'https://minggas.com/');
-  }
-  if (host === 'http://www.minggas.com') {
-    return res.redirect(301, 'https://minggas.com/');
-  }
-  if (host === 'https://www.minggas.com') {
-    return res.redirect(301, 'https://minggas.com/');
-  }
-  return next();
-});
 
 app.set("view engine", "pug");
 
