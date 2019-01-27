@@ -1,8 +1,14 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <link rel="preconnect" href="https://www.google-analytics.com" />
-    <!-- Global site tag (gtag.js) - Google Analytics -->
+
+<head>
+  <link rel="preconnect" href="https://www.google-analytics.com" />
+  <script src="https://cdn.jsdelivr.net/ga-lite/latest/ga-lite.min.js" async></script>
+  <script>
+    var galite = galite || {};
+galite.UA = 'UA-133328659-1'; // Insert your tracking code here
+</script>
+  <!-- Global site tag (gtag.js) - Google Analytics 
     <script
       async
       src="https://www.googletagmanager.com/gtag/js?id=UA-133328659-1"
@@ -16,391 +22,222 @@
 
       gtag("config", "UA-133328659-1");
     </script>
+-->
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <link rel="canonical" href="https://minggas.com" />
+  <link rel="manifest" href="/manifest.json" />
+  <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
+  <meta name="description" content="I'm a Front End Developer from Brazil. Here you can find informations about me and my projects." />
+  <title>Minggas Webpage | Front End Developer</title>
+  <meta property="og:title" content="Minggas Webpage | Front End Developer" />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://minggas.com" />
+  <meta property="og:description" content="I'm a Front End Developer from Brazil. Here you can find informations about me and my projects." />
+  <meta property="og:image" content="https://minggas.com/assets/avatar.jpg" />
+  <meta property="og:image:width" content="590" />
+  <meta property="og:image:height" content="440" />
+  <meta property="og:site_name" content="Minggas Webpage" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:description" content="I'm a Front End Developer from Brazil. Here you can find informations about me and my projects." />
+  <meta name="twitter:title" content="Minggas Webpage | Front End Developer" />
+  <meta name="twitter:site" content="@minggasweb" />
+  <meta name="twitter:creator" content="@minggasweb" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" />
+  <link rel="stylesheet" href="/basic.css" type="text/css" media="screen" />
+  <link rel="stylesheet" href="/desktop.css" type="text/css" media="screen and (min-width: 1000px)" />
+  <link rel="stylesheet" href="/tablet.css" type="text/css" media="screen and (min-width: 700px) and (max-width: 1000px)" />
+  <link rel="stylesheet" href="/mobile.css" type="text/css" media="screen and (max-width: 700px)" />
+</head>
 
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <link rel="canonical" href="https://minggas.com" />
-    <link rel="manifest" href="/manifest.json" />
-    <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
-    <meta
-      name="description"
-      content="I'm a Front End Developer from Brazil. Here you can find informations about me and my projects."
-    />
-    <title>Minggas Webpage | Front End Developer</title>
-    <meta property="og:title" content="Minggas Webpage | Front End Developer" />
-    <meta property="og:type" content="website" />
-    <meta property="og:url" content="https://minggas.com" />
-    <meta
-      property="og:description"
-      content="I'm a Front End Developer from Brazil. Here you can find informations about me and my projects."
-    />
-    <meta property="og:image" content="https://minggas.com/assets/avatar.jpg" />
-    <meta property="og:image:width" content="590" />
-    <meta property="og:image:height" content="440" />
-    <meta property="og:site_name" content="Minggas Webpage" />
-    <meta name="twitter:card" content="summary_large_image" />
-    <meta
-      name="twitter:description"
-      content="I'm a Front End Developer from Brazil. Here you can find informations about me and my projects."
-    />
-    <meta
-      name="twitter:title"
-      content="Minggas Webpage | Front End Developer"
-    />
-    <meta name="twitter:site" content="@minggasweb" />
-    <meta name="twitter:creator" content="@minggasweb" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" />    
-    <link rel="stylesheet" href="/main.css" type="text/css" />
-  </head>
+<body>
+  <nav class="nav-bar" id="navbar">
+    <div class="nav-logo"><span>MINGGAS</span></div>
+    <div class="nav-toggler">
+      <div class="btn-line"></div>
+      <div class="btn-line"></div>
+      <div class="btn-line"></div>
+    </div>
+    <ul class="collapse-menu">
+      <li class="nav-link">
+        <a href="#welcome-section"> <span class="active">Home</span> </a>
+      </li>
+      <li class="nav-link">
+        <a href="#about"> <span>About</span> </a>
+      </li>
+      <li class="nav-link">
+        <a href="#projects"> <span>Projects</span> </a>
+      </li>
+      <li class="nav-link">
+        <a href="#skills"> <span>Skills</span> </a>
+      </li>
+      <li class="nav-link">
+        <a href="#contact"> <span>Contact</span> </a>
+      </li>
+    </ul>
+  </nav>
+  <header id="welcome-section" class="section bg-img">
+    <h1 class="main-text-header"><span>Mi</span>nggas</h1>
+  </header>
+  <main>
+    <section class="tagline">
+      <h2>Hi, I'm a brazilian Front-End Developer.</h2>
+    </section>
+    <section id="about" class="about section">
+      <img data-src="assets/me.jpg" alt="minggas" class="bio-image" />
 
-  <body>
-    <nav class="nav-bar" id="navbar">
-      <div class="nav-logo"><span>MINGGAS</span></div>
-      <div class="nav-toggler">
-        <div class="btn-line"></div>
-        <div class="btn-line"></div>
-        <div class="btn-line"></div>
+      <div class="banner-text">
+        <h2 class="banner-title">about me</h2>
+        <span>I'm a self-taught Front-End developer who is graduating in Analysis
+          and Systems Development. Currently i work with web development only
+          on my own projects, but i always searching for new challenges and
+          knowledges. When i'm not coding you'll find me with my pets, playing
+          guitar, solving puzzles, cooking or eating. Check out my
+          <a href="assets/CV.pdf" target="_blank" title="Download my CV">Resume</a>.</span>
       </div>
-      <ul class="collapse-menu">
-        <li class="nav-link">
-          <a href="#welcome-section"> <span class="active">Home</span> </a>
+    </section>
+    <section id="projects" class="portfolio section">
+      <div class="project-tile port1">
+       
+        <h2>Weather Now</h2>
+  
+      </div>
+      <div class="project-tile port2">
+        
+        <h2>WikiSearch</h2>
+       
+      </div>
+      <div class="project-tile port3">
+     
+        <h2>Pomodoro Timer</h2>
+        
+        
+      </div>
+      <div class="project-tile port4">
+        
+        <h2>Quote-O-Matic</h2>
+        
+      </div>
+    </section>
+    <section id="skills" class="skills section">
+      <h2>Skills</h2>
+      <ul>
+        <li>
+          <img data-src="assets/html5180.png" alt="HTML5 icon" />
+          <div class="info">
+            <h3>HTML 5</h3>
+            <p>
+              Using in all my projects, have a good understanding of its
+              usage.
+            </p>
+          </div>
         </li>
-        <li class="nav-link">
-          <a href="#about"> <span>About</span> </a>
+        <li>
+          <img data-src="assets/css3180.png" alt="CSS3 icon" />
+          <div class="info">
+            <h3>CSS 3</h3>
+            <p>
+              Like HTML have using for a while and have a good understanding
+              of its usage.
+            </p>
+          </div>
         </li>
-        <li class="nav-link">
-          <a href="#projects"> <span>Projects</span> </a>
+        <li>
+          <img data-src="assets/js180.png" alt="JS icon" />
+          <div class="info">
+            <h3>Javascript</h3>
+            <p>
+              Know ES5, ES6 and some ES7 syntax. Have a good familiarity with
+              the language.
+            </p>
+          </div>
         </li>
-        <li class="nav-link">
-          <a href="#skills"> <span>Skills</span> </a>
+        <li>
+          <img data-src="assets/react180.png" alt="React icon" />
+          <div class="info">
+            <h3>React</h3>
+            <p>
+              Had made some projects with it and will like to learn and work
+              more with it.
+            </p>
+          </div>
         </li>
-        <li class="nav-link">
-          <a href="#contact"> <span>Contact</span> </a>
+        <li>
+          <img data-src="assets/sass.png" alt="Sass icon" />
+          <div class="info">
+            <h3>Scss</h3>
+            <p>Changing from CSS to the Sassy CSS. Use in some projects.</p>
+          </div>
+        </li>
+        <li>
+          <img data-src="assets/nodejs.png" alt="Nodejs icon" />
+          <div class="info">
+            <h3>Nodejs</h3>
+            <p>Have little experience with it, but have some notion about.</p>
+          </div>
+        </li>
+        <li>
+          <img data-src="assets/Git180.png" alt="Git icon" />
+          <div class="info">
+            <h3>Git</h3>
+            <p>
+              Can work with without trouble and i'm use in all my projects.
+            </p>
+          </div>
         </li>
       </ul>
-    </nav>
-    <header id="welcome-section" class="section bg-img">
-      <h1 class="main-text-header"><span>Mi</span>nggas</h1>
-    </header>
-    <main>
-      <section class="tagline">
-        <h2>Hi, I'm a brazilian Front-End Developer.</h2>
-      </section>
-      <section id="about" class="about section">
-        <img data-src="assets/me.jpg" alt="minggas" class="bio-image" />
+    </section>
+    <section id="contact" class="contact section">
+      <h2>Contact Me</h2>
+      <ul>
+        <li>
+          <a href="https://www.freecodecamp.org/minggas" target="_blank" id="profile-link" title="Freecodecamp" rel="noreferrer">
+            <img class="contact-link" data-src="assets/fcc.svg" alt="FCC Logo" />
+          </a>
+        </li>
+        <li>
+          <a href="https://codepen.io/minggas/" target="_blank" title="Codepen" rel="noreferrer">
+            <img class="contact-link" data-src="assets/codepen.svg" alt="Codepen Logo" />
+          </a>
+        </li>
+        <li>
+          <a href="https://twitter.com/minggasweb" target="_blank" title="Twitter" rel="noreferrer">
+            <img class="contact-link" data-src="assets/twitter.svg" alt="Twitter Logo" />
+          </a>
+        </li>
+        <li>
+          <a href="https://github.com/minggas/" target="_blank" title="Github" rel="noreferrer">
+            <img class="contact-link" data-src="assets/github.svg" alt="Github Logo" />
+          </a>
+        </li>
+      </ul>
+      <form action="/contact" method="post" class="contact-form">
+        <label for="name">Name</label>
+        <input class="form-input" type="text" name="name" id="name" placeholder="Enter you name" required />
 
-        <div class="banner-text">
-          <h2 class="banner-title">about me</h2>
-          <span
-            >I'm a self-taught Front-End developer who is graduating in Analysis
-            and Systems Development. Currently i work with web development only
-            on my own projects, but i always searching for new challenges and
-            knowledges. When i'm not coding you'll find me with my pets, playing
-            guitar, solving puzzles, cooking or eating. Check out my
-            <a href="assets/CV.pdf" target="_blank" title="Download my CV"
-              >Resume</a
-            >.</span
-          >
-        </div>
-      </section>
-      <section id="projects" class="portfolio section">
-        <div class="project-tile port1">
-          <span>A forecast app made as part of FreeCodeCamp course.</span>
-          <h2>Weather Now</h2>
-          <a
-            class="img-port"
-            href="https://minggas.github.io/WeatherForecast/"
-            target="_blank"
-            title="Link to Weather Now"
-            rel="noreferrer"
-          >
-            <img
-              data-src="assets/weather.jpg"
-              alt="Screen of Weather Now app"
-            />
-          </a>
-          <a
-            href="https://minggas.github.io/WeatherForecast/"
-            class="btn-light"
-            rel="noreferrer"
-          >
-            <i class="fas fa-eye"></i> Project
-          </a>
-          <a
-            href="https://github.com/minggas/WeatherForecast"
-            class="btn-dark"
-            rel="noreferrer"
-          >
-            <i class="fab fa-github"></i> Github
-          </a>
-          <span>Made with: HTML5, CSS3 and Vanilla JS</span>
-        </div>
-        <div class="project-tile port2">
-          <span
-            >A search app for wikipedia made as part of FreeCodeCamp
-            course.</span
-          >
-          <h2>WikiSearch</h2>
-          <a
-            class="img-port"
-            href="https://minggas.github.io/wikisearch/"
-            target="_blank"
-            title="Link to WikiSearch"
-            rel="noreferrer"
-          >
-            <img
-              data-src="assets/wikisearch.jpg"
-              alt="Screen of WikiSearch app"
-            />
-          </a>
-          <a
-            href="https://minggas.github.io/wikisearch/"
-            class="btn-light"
-            rel="noreferrer"
-          >
-            <i class="fas fa-eye"></i> Project
-          </a>
-          <a
-            href="https://github.com/minggas/wikisearch"
-            class="btn-dark"
-            rel="noreferrer"
-          >
-            <i class="fab fa-github"></i> Github
-          </a>
-          <span>Made with: HTML5, CSS3 and JQuery</span>
-        </div>
-        <div class="project-tile port3">
-          <span>A pomodoro timer made with React.</span>
-          <h2>Pomodoro Timer</h2>
-          <a
-            class="img-port"
-            href="https://minggas.github.io/react-pomodoro/"
-            target="_blank"
-            title="Link to Pomodoro Timer"
-            rel="noreferrer"
-          >
-            <img
-              data-src="assets/pomodoro.jpg"
-              alt="Screen of Pomodoro Timer app"
-            />
-          </a>
-          <a
-            href="https://minggas.github.io/react-pomodoro/"
-            class="btn-light"
-            rel="noreferrer"
-          >
-            <i class="fas fa-eye"></i> Project
-          </a>
-          <a
-            href="https://github.com/minggas/react-pomodoro"
-            class="btn-dark"
-            rel="noreferrer"
-          >
-            <i class="fab fa-github"></i> Github
-          </a>
-          <span>Made with: HTML5, CSS3 and React</span>
-        </div>
-        <div class="project-tile port4">
-          <span>A React app to generate random quotes</span>
-          <h2>Quote-O-Matic</h2>
-          <a
-            class="img-port"
-            href="https://minggas.github.io/react-quotes/"
-            target="_blank"
-            title="Link to Quote-O-Matic"
-            rel="noreferrer"
-          >
-            <img
-              data-src="assets/quotes.jpg"
-              alt="Screen of Quote-O-Matic app"
-            />
-          </a>
-          <a
-            href="https://minggas.github.io/react-quotes/"
-            class="btn-light"
-            rel="noreferrer"
-          >
-            <i class="fas fa-eye"></i> Project
-          </a>
-          <a
-            href="https://github.com/minggas/react-quotes"
-            class="btn-dark"
-            rel="noreferrer"
-          >
-            <i class="fab fa-github"></i> Github
-          </a>
-          <span>Made with: HTML5, SCSS and React</span>
-        </div>
-      </section>
-      <section id="skills" class="skills section">
-        <h2>Skills</h2>
-        <ul>
-          <li>
-            <img data-src="assets/html5180.png" alt="HTML5 icon" />
-            <div class="info">
-              <h3>HTML 5</h3>
-              <p>
-                Using in all my projects, have a good understanding of its
-                usage.
-              </p>
-            </div>
-          </li>
-          <li>
-            <img data-src="assets/css3180.png" alt="CSS3 icon" />
-            <div class="info">
-              <h3>CSS 3</h3>
-              <p>
-                Like HTML have using for a while and have a good understanding
-                of its usage.
-              </p>
-            </div>
-          </li>
-          <li>
-            <img data-src="assets/js180.png" alt="JS icon" />
-            <div class="info">
-              <h3>Javascript</h3>
-              <p>
-                Know ES5, ES6 and some ES7 syntax. Have a good familiarity with
-                the language.
-              </p>
-            </div>
-          </li>
-          <li>
-            <img data-src="assets/react180.png" alt="React icon" />
-            <div class="info">
-              <h3>React</h3>
-              <p>
-                Had made some projects with it and will like to learn and work
-                more with it.
-              </p>
-            </div>
-          </li>
-          <li>
-            <img data-src="assets/sass.png" alt="Sass icon" />
-            <div class="info">
-              <h3>Scss</h3>
-              <p>Changing from CSS to the Sassy CSS. Use in some projects.</p>
-            </div>
-          </li>
-          <li>
-            <img data-src="assets/nodejs.png" alt="Nodejs icon" />
-            <div class="info">
-              <h3>Nodejs</h3>
-              <p>Have little experience with it, but have some notion about.</p>
-            </div>
-          </li>
-          <li>
-            <img data-src="assets/Git180.png" alt="Git icon" />
-            <div class="info">
-              <h3>Git</h3>
-              <p>
-                Can work with without trouble and i'm use in all my projects.
-              </p>
-            </div>
-          </li>
-        </ul>
-      </section>
-      <section id="contact" class="contact section">
-        <h2>Contact Me</h2>
-        <ul>
-          <li>
-            <a
-              href="https://www.freecodecamp.org/minggas"
-              target="_blank"
-              id="profile-link"
-              title="Freecodecamp"
-              rel="noreferrer"
-            >
-              <img
-                class="contact-link"
-                data-src="assets/fcc.svg"
-                alt="FCC Logo"
-              />
-            </a>
-          </li>
-          <li>
-            <a
-              href="https://codepen.io/minggas/"
-              target="_blank"
-              title="Codepen"
-              rel="noreferrer"
-            >
-              <img
-                class="contact-link"
-                data-src="assets/codepen.svg"
-                alt="Codepen Logo"
-              />
-            </a>
-          </li>
-          <li>
-            <a
-              href="https://twitter.com/minggasweb"
-              target="_blank"
-              title="Twitter"
-              rel="noreferrer"
-            >
-              <img
-                class="contact-link"
-                data-src="assets/twitter.svg"
-                alt="Twitter Logo"
-              />
-            </a>
-          </li>
-          <li>
-            <a
-              href="https://github.com/minggas/"
-              target="_blank"
-              title="Github"
-              rel="noreferrer"
-            >
-              <img
-                class="contact-link"
-                data-src="assets/github.svg"
-                alt="Github Logo"
-              />
-            </a>
-          </li>
-        </ul>
-        <form action="/contact" method="post" class="contact-form">
-          <label for="name">Name</label>
-          <input
-            class="form-input"
-            type="text"
-            name="name"
-            id="name"
-            placeholder="Enter you name"
-            required
-          />
+        <label for="email">E-Mail</label>
+        <input class="form-input" type="email" name="email" id="email" placeholder="Enter your e-mail" required />
 
-          <label for="email">E-Mail</label>
-          <input
-            class="form-input"
-            type="email"
-            name="email"
-            id="email"
-            placeholder="Enter your e-mail"
-            required
-          />
+        <label for="message">Message</label>
+        <textarea class="form-input" name="message" id="message" cols="30" rows="10" placeholder="Enter your message"
+          required></textarea>
 
-          <label for="message">Message</label>
-          <textarea
-            class="form-input"
-            name="message"
-            id="message"
-            cols="30"
-            rows="10"
-            placeholder="Enter your message"
-            required
-          ></textarea>
+        <input type="submit" value="Send" />
+      </form>
+    </section>
+  </main>
+  <footer><span id="footerTxt"></span></footer>
+  <script>
+    document.getElementById("footerTxt").innerHTML =
+      "minggas@" + new Date().getFullYear();
+  </script>
+</body>
 
-          <input type="submit" value="Send" />
-        </form>
-      </section>
-    </main>
-    <footer><span id="footerTxt"></span></footer>
-  </body>
-<script src="/intersection-observer.js"></script>
-  <script src="/main.js"></script>
-  <script src="/lazy-img.js"></script>
+<script src="/intersection-observer.js" async></script>
+<script src="/collapsed-menu.js" async></script>
+<script src="/lazy-img.js" async></script>
+<script src="/portfolio.js" async></script>
+<script src="/nav.js" async></script>
+
 </html>

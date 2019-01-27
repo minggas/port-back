@@ -1,8 +1,62 @@
 @font-face {
- font-family: 'Alegreya Sans SC';
- font-display: block;
- src: local('Alegreya'), url("https://fonts.gstatic.com/s/alegreyasanssc/v8/mtGh4-RGJqfMvt7P8FUr0Q1j-Hf1Bkll9w5DPYo.woff2") format('woff2');
+  font-family: 'Alegreya Sans SC';
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/alegreyasanssc/v8/mtGh4-RGJqfMvt7P8FUr0Q1j-Hf1Bkll9w5DPYo.woff2) format("woff2")
 }
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  outline: none
+}
+
+html {
+  font-family: 'Alegreya Sans SC', sans-serif
+}
+
+body {
+  background-color: #1f2833;
+  overflow-x: hidden
+}
+
+li {
+  list-style: none
+}
+
+a {
+  text-decoration: none;
+  font-weight: bolder;
+  font-size: 110%;
+  color: inherit
+}
+
+h2 {
+  color: #64fcf2;
+  font-size: calc(20px + 1.5vw);
+  letter-spacing: 3px
+}
+
+.skills,
+.contact {
+  padding: 2%
+}
+
+textarea {
+  resize: none
+}
+
+footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 3rem;
+  padding: 2%;
+  background: #000;
+  color: #ccc;
+  margin-top: 30px
+}
+
 .nav-bar {
   padding: 1rem 3%;
   width: 100%;
@@ -14,7 +68,7 @@
   position: fixed;
   top: 0;
   z-index: 2;
-  transition: all 0.5s ease-out
+  transition: all .5s ease-out
 }
 
 .nav-bar.show {
@@ -25,26 +79,6 @@
   flex: 1
 }
 
-.nav-bar .collapse-menu {
-  flex: 3;
-  display: flex;
-  justify-content: space-around;
-  padding: 0;
-  flex-direction: row;
-  background: transparent
-}
-
-.nav-bar .collapse-menu .nav-link span {
-  transition: all 0.5s ease-out;
-  margin: 0 15px;
-  font-size: calc(0.8rem + 0.4vw);
-  padding: 2px 5px;
-  border-radius: 5px;
-  letter-spacing: 4px;
-  color: #ccc;
-  font-weight: 700
-}
-
 .nav-bar .collapse-menu .nav-link span:hover {
   color: #64fcf2
 }
@@ -53,66 +87,6 @@
   color: #333;
   background: #64fcf2;
   cursor: default
-}
-
-.nav-bar .collapse-menu.mobile {
-  padding: 1rem 0 .3rem;
-  position: absolute;
-  top: 4rem;
-  right: 100%;
-  width: 100%;
-  flex-direction: column;
-  transition: all 0.5s ease-out;
-  z-index: 0;
-  background: rgba(31, 40, 51, .9)
-}
-
-.nav-bar .collapse-menu.mobile .nav-link {
-  margin: .8rem 0
-}
-
-.nav-bar .collapse-menu.mobile.show {
-  right: 0
-}
-
-.nav-toggler {
-  visibility: hidden;
-  opacity: 0;
-  position: absolute;
-  z-index: 3;
-  right: 35px;
-  top: 23px;
-  cursor: pointer;
-  transition: all 0.5s ease-out
-}
-
-.nav-toggler.mobile {
-  visibility: visible;
-  opacity: 1
-}
-
-.nav-toggler.mobile .btn-line {
-  width: 28px;
-  height: 3px;
-  margin: 0 0 5px 0;
-  background: #ccc;
-  transition: all 0.5s ease-out
-}
-
-.nav-toggler.mobile.close {
-  transform: rotate(180deg)
-}
-
-.nav-toggler.mobile.close .btn-line:nth-child(1) {
-  transform: rotate(45deg) translate(5px, 5px)
-}
-
-.nav-toggler.mobile.close .btn-line:nth-child(2) {
-  opacity: 0
-}
-
-.nav-toggler.mobile.close .btn-line:nth-child(3) {
-  transform: rotate(-45deg) translate(7px, -6px)
 }
 
 header {
@@ -170,7 +144,7 @@ header .main-text-header span {
 .about {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  grid-template-areas: "card1 card2 card3 card4" "portrait portrait text text";
+  grid-template-areas: "card1 card2 card3 card4""portrait portrait text text";
   grid-gap: 1rem;
   padding: 1rem 1.5rem;
   color: #ccc
@@ -179,7 +153,7 @@ header .main-text-header span {
 .about .skill-card {
   grid-column: span 1;
   display: flex;
-  align-items: center;
+  align-items: center
 }
 
 .about .skill-card .img-card {
@@ -266,7 +240,7 @@ header .main-text-header span {
 .portfolio .project-tile {
   padding: 1rem;
   flex: 1;
-  transition: all 0.5s ease-out;
+  transition: all .5s ease-out;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -282,7 +256,7 @@ header .main-text-header span {
   display: flex;
   justify-content: center;
   align-items: center;
-  transition: all 0.5s ease-out
+  transition: all .5s ease-out
 }
 
 .portfolio .project-tile .img-port {
@@ -320,7 +294,7 @@ header .main-text-header span {
   border: 0;
   margin-bottom: .3rem;
   border-radius: 1rem;
-  transition: all 0.5s ease-out
+  transition: all .5s ease-out
 }
 
 .portfolio .project-tile .btn:hover,
@@ -332,7 +306,7 @@ header .main-text-header span {
 
 .portfolio .project-tile .btn-dark {
   transform: translate3d(100vw, 0, 0);
-  background: black;
+  background: #000;
   color: #ccc
 }
 
@@ -351,11 +325,11 @@ header .main-text-header span {
 }
 
 .portfolio .project-tile.open {
-  flex: 6
+  flex: 20
 }
 
 .portfolio .project-tile.open .img-port {
-  transition: all 0.5s ease-out;
+  transition: all .5s ease-out;
   display: block;
   transform: perspective(500px) translate3d(0, 0, -500px)
 }
@@ -381,7 +355,6 @@ header .main-text-header span {
 }
 
 .project-tile h2 {
-  padding-top: 4rem;
   font-size: calc(1rem + 1.5vw)
 }
 
@@ -422,7 +395,7 @@ header .main-text-header span {
 }
 
 .skills ul {
-  display: grid; 
+  display: grid;
   grid-gap: .5rem;
   margin: 1rem 0;
   padding: 1rem 5vw
@@ -443,7 +416,7 @@ header .main-text-header span {
   height: auto;
   transform: scale(.8);
   filter: grayscale(100%);
-  transition: all 0.5s ease-out
+  transition: all .5s ease-out
 }
 
 .skills ul li img:hover {
@@ -455,15 +428,14 @@ header .main-text-header span {
   visibility: hidden;
   opacity: 0;
   position: absolute;
-  min-width: 140px;
+  min-width: 100px;
   top: -95%;
-  font-size: .7rem;
   right: -2rem;
   padding: .8rem 1rem;
   border-radius: 5px;
   background-color: #64fcf2;
   color: #333;
-  transition: all 0.5s ease-out
+  transition: all .5s ease-out
 }
 
 .skills ul li .info:after {
@@ -501,7 +473,7 @@ header .main-text-header span {
 }
 
 .contact a .contact-link {
-  transition: all 0.5s ease-out;
+  transition: all .5s ease-out;
   filter: invert(95%)
 }
 
@@ -514,11 +486,11 @@ header .main-text-header span {
   flex-direction: column;
   margin: 1rem 2.5rem;
   padding: 1rem;
-  color: #ccc;
+  color: #ccc
 }
 
 .contact-form input[type="submit"] {
-  transition: all 0.5s ease-out;
+  transition: all .5s ease-out;
   width: 9rem;
   font-size: 1rem;
   text-align: center;
@@ -526,16 +498,16 @@ header .main-text-header span {
   padding: 1rem 2rem;
   background-color: #223449;
   border: 1px solid #1f2833;
-  color: #ccc;
+  color: #ccc
 }
 
 .contact-form input[type="submit"]:hover {
-  background-color: #64fcf2;  
-  border: 1px solid black
+  background-color: #64fcf2;
+  border: 1px solid #000
 }
 
 .contact-form .form-input {
-  transition: all 0.5s ease-out;
+  transition: all .5s ease-out;
   margin: .4rem;
   padding: .5rem;
   border: 1px solid rgba(0, 0, 0, .2);
@@ -550,107 +522,4 @@ header .main-text-header span {
 .contact-form,
 .contact-form>* {
   border-radius: 5px
-}
-
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  outline: none
-}
-
-html {
-  font-family: 'Alegreya Sans SC', sans-serif
-}
-
-body {
-  background-color: #1f2833;
-  overflow-x: hidden;
-}
-
-li {
-  list-style: none;
-}
-
-a {
-  text-decoration: none;
-  font-weight: bolder;
-  font-size: 110%;
-  color: inherit;
-}
-
-h2 {
-  color: #64fcf2;
-  font-size: calc(20px + 1.5vw);
-  letter-spacing: 3px;
-}
-
-.skills,
-.contact {
-  padding: 2%;
-}
-
-textarea {
-  resize: none;
-}
-
-footer {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 3rem;
-  padding: 2%;
-  background: black;
-  color: #ccc;
-  margin-top: 30px;
-}
-
-@media screen and (min-width:1171px) {
-  .about .skill-card {
-    flex-direction: column;
-    margin-top: -50px;
-    flex-direction: column;
-    padding: 0 5% 10%;
-  }
-  .skills ul {
-    grid-template-columns: repeat(7, minmax(0, 1fr));
-  }
-}
-
-@media screen and (min-width:769px) and (max-width:1170px) {
-  .about .skill-card {
-    flex-direction: column;
-    margin-top: -50px;
-    flex-direction: column;
-    padding: 0 5% 10%;
-  }
-  .skills ul {
-    grid-template-columns: repeat(7, minmax(0, 1fr));
-  }
-}
-
-@media screen and (max-width:768px) {
-  .about {
-    grid-template-areas: 'card1 card2' 'card3 card4' 'portrait text';
-    grid-template-columns: 1fr 1fr;
-  }
-  .portfolio {
-    flex-direction: column;
-  }
-  .portfolio .project-tile.active h2 {
-    padding-top: 0;
-  }
-  .skills ul {
-    grid-template-columns: repeat(5, minmax(0, 1fr));
-  }
-}
-
-@media screen and (max-width:500px) {
-  .about {
-    grid-template-areas: 'card1' 'card2' 'card3' 'card4' 'portrait' 'portrait' 'text' 'text';
-    grid-template-columns: 1fr;
-  }
-  .skills ul {
-    grid-template-columns: repeat(3, minmax(0, 1fr));
-  }
 }

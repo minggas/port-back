@@ -3,12 +3,13 @@ const app = express();
 const bodyParser = require("body-parser");
 const axios = require("axios");
 const helmet = require("helmet");
+const compression = require('compression');
 require("dotenv").config();
 
 app.use(helmet());
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
-
+app.use(compression());
 app.use(function forceLiveDomain(req, res, next) {  
   var host = req.get('Host');
   if (host === 'http://minggas.com') {
@@ -26,8 +27,10 @@ app.use(function forceLiveDomain(req, res, next) {
 app.set("view engine", "pug");
 
 app.get("/", (req, res) => {
+  const headers = req.headers['accept-encoding'].split(',');  
   res.set('Cache-Control', 'public, max-age=31557600');
-  res.sendFile(__dirname + "/views/index.html");
+    res.sendFile(__dirname + "/views/index.html");
+   
 });
 
 app.post("/contact", handleSayHello);

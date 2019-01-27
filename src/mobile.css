@@ -1,0 +1,90 @@
+.nav-bar .collapse-menu {
+  padding: 1rem 0 .3rem;
+  position: absolute;
+  top: 4rem;
+  right: 100%;
+  width: 100%;
+  flex-direction: column;
+  transition: all 0.5s ease-out;
+  z-index: 0;
+  background: rgba(31, 40, 51, .9)
+}
+
+.nav-bar .collapse-menu .nav-link {
+  margin: .8rem 0
+}
+
+.nav-bar .collapse-menu.show {
+  right: 0
+}
+
+.nav-toggler {
+  visibility: hidden;
+  opacity: 0;
+  position: absolute;
+  z-index: 3;
+  right: 35px;
+  top: 23px;
+  cursor: pointer;
+  transition: all 0.5s ease-out
+}
+
+.nav-toggler {
+  visibility: visible;
+  opacity: 1
+}
+
+.nav-toggler .btn-line {
+  width: 28px;
+  height: 3px;
+  margin: 0 0 5px 0;
+  background: #ccc;
+  transition: all 0.5s ease-out
+}
+
+.nav-toggler.close {
+  transform: rotate(180deg)
+}
+
+.nav-toggler.close .btn-line:nth-child(1) {
+  transform: rotate(45deg) translate(5px, 5px)
+}
+
+.nav-toggler.close .btn-line:nth-child(2) {
+  opacity: 0
+}
+
+.nav-toggler.close .btn-line:nth-child(3) {
+  transform: rotate(-45deg) translate(7px, -6px)
+}
+
+.about .skill-card {
+  flex-direction: row;
+  margin-top: 0;
+  padding: 1%
+}
+@media screen and (max-width:768px) {
+  .about {
+    grid-template-areas: 'card1 card2' 'card3 card4' 'portrait text';
+    grid-template-columns: 1fr 1fr;
+  }
+  .portfolio {
+    flex-direction: column;
+  }
+  .portfolio .project-tile.active h2 {
+    padding-top: 0;
+  }
+  .skills ul {
+    grid-template-columns: repeat(5, minmax(0, 1fr));
+  }
+}
+
+@media screen and (max-width:500px) {
+  .about {
+    grid-template-areas: 'card1' 'card2' 'card3' 'card4' 'portrait' 'portrait' 'text' 'text';
+    grid-template-columns: 1fr;
+  }
+  .skills ul {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}
