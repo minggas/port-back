@@ -14,7 +14,7 @@ app.use(compression());
 app.set("view engine", "pug");
 
 app.get("/", (req, res) => {
-  const headers = req.headers['accept-encoding'].split(',');  
+  const headers = req.headers['accept-encoding'];  
   res.set('Cache-Control', 'public, max-age=31557600');
     res.sendFile(__dirname + "/views/index.html");
    

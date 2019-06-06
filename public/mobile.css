@@ -55,6 +55,10 @@
   transform: rotate(-45deg) translate(7px, -6px)
 }
 
+header.bg-img {
+  background-attachment: scroll;
+}
+
 .about .skill-card {
   flex-direction: row;
   margin-top: 0;

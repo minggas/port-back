@@ -126,7 +126,6 @@ header {
 
 header.bg-img {
   background: url(../assets/background.jpg);
-  background-attachment: fixed;
   background-size: cover
 }
 
@@ -136,7 +135,7 @@ header.bg-img:after {
   top: 0;
   right: 0;
   width: 100%;
-  height: 100%;
+  height: 100vh;
   z-index: 0;
   background: rgba(102, 102, 102, .9)
 }
