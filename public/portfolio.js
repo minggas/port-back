@@ -2,38 +2,23 @@
   "use strict";
   function a() {
     this.classList.toggle("open");
-    if(this.classList.contains('open')){
-      if(this.classList.contains('port1')){
-        this.innerHTML = `<span>A forecast app made as part of FreeCodeCamp course.</span>
-        <h2>Weather Now</h2>
-        <a class="img-port" href="https://minggas.github.io/WeatherForecast/" target="_blank" title="Link to Weather Now"
+    if (this.classList.contains("open")) {
+      if (this.classList.contains("port1")) {
+        this.innerHTML = `<span>A simple Simon Game made as part of FreeCodeCamp course.</span>
+        <h2>Simon Game</h2>
+        <a class="img-port" href="https://minggas.github.io/simon-js/" target="_blank" title="Link to Simon Game"
           rel="noreferrer">
-          <img src="assets/weather.jpg" alt="Screen of Weather Now app" />
+          <img src="assets/simon.jpg" alt="Screen of Simon Game app" />
         </a>
-        <a href="https://minggas.github.io/WeatherForecast/" class="btn-light" rel="noreferrer">
+        <a href="https://minggas.github.io/simon-js/" class="btn-light" rel="noreferrer">
           <i class="fas fa-eye"></i> Project
         </a>
-        <a href="https://github.com/minggas/WeatherForecast" class="btn-dark" rel="noreferrer">
+        <a href="https://github.com/minggas/simon-js" class="btn-dark" rel="noreferrer">
           <i class="fab fa-github"></i> Github
         </a>
         <span>Made with: HTML5, CSS3 and Vanilla JS</span>`;
       }
-      if(this.classList.contains('port1')){
-        this.innerHTML = `<span>A forecast app made as part of FreeCodeCamp course.</span>
-        <h2>Weather Now</h2>
-        <a class="img-port" href="https://minggas.github.io/WeatherForecast/" target="_blank" title="Link to Weather Now"
-          rel="noreferrer">
-          <img src="assets/weather.jpg" alt="Screen of Weather Now app" />
-        </a>
-        <a href="https://minggas.github.io/WeatherForecast/" class="btn-light" rel="noreferrer">
-          <i class="fas fa-eye"></i> Project
-        </a>
-        <a href="https://github.com/minggas/WeatherForecast" class="btn-dark" rel="noreferrer">
-          <i class="fab fa-github"></i> Github
-        </a>
-        <span>Made with: HTML5, CSS3 and Vanilla JS</span>`;
-      }
-      if(this.classList.contains('port2')){
+      if (this.classList.contains("port2")) {
         this.innerHTML = `<span>A search app for wikipedia made as part of FreeCodeCamp
         course.</span>
       <h2>WikiSearch</h2>
@@ -48,7 +33,7 @@
       </a>
       <span>Made with: HTML5, CSS3 and JQuery</span>`;
       }
-      if(this.classList.contains('port3')){
+      if (this.classList.contains("port3")) {
         this.innerHTML = `<span>A pomodoro timer made with React.</span>
         <h2>Pomodoro Timer</h2>
         <a class="img-port" href="https://minggas.github.io/react-pomodoro/" target="_blank" title="Link to Pomodoro Timer"
@@ -63,7 +48,7 @@
         </a>
         <span>Made with: HTML5, CSS3 and React</span>`;
       }
-      if(this.classList.contains('port4')){
+      if (this.classList.contains("port4")) {
         this.innerHTML = `<span>A React app to generate random quotes</span>
         <h2>Quote-O-Matic</h2>
         <a class="img-port" href="https://minggas.github.io/react-quotes/" target="_blank" title="Link to Quote-O-Matic"
@@ -79,19 +64,18 @@
         <span>Made with: HTML5, SCSS and React</span>`;
       }
     } else {
-      if(this.classList.contains('port1')){
-        this.innerHTML = `<h2>Weather Now</h2>`;
+      if (this.classList.contains("port1")) {
+        this.innerHTML = `<h2>Simon Game</h2>`;
       }
-      if(this.classList.contains('port2')){
+      if (this.classList.contains("port2")) {
         this.innerHTML = `<h2>WikiSearch</h2>`;
       }
-      if(this.classList.contains('port3')){
+      if (this.classList.contains("port3")) {
         this.innerHTML = `<h2>Pomodoro Timer</h2>`;
       }
-      if(this.classList.contains('port4')){
+      if (this.classList.contains("port4")) {
         this.innerHTML = `<h2>Quote-O-Matic</h2>`;
       }
-      
     }
   }
   function b(d) {
@@ -104,4 +88,4 @@
     c.forEach(function(d) {
       return d.addEventListener("transitionend", b);
     });
-})()
+})();
