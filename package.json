@@ -11,12 +11,12 @@
   "author": "minggas",
   "license": "MIT",
   "dependencies": {
-    "axios": "^0.19.0",
     "body-parser": "^1.18.3",
     "compression": "^1.7.3",
     "dotenv": "^6.0.0",
     "express": "^4.16.3",
     "helmet": "^3.15.0",
+    "mongoose": "^5.6.4",
     "pug": "^2.0.3"
   },
   "devDependencies": {
