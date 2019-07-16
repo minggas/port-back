@@ -4,6 +4,15 @@ const bodyParser = require("body-parser");
 const helmet = require("helmet");
 const compression = require("compression");
 require("dotenv").config();
+const mongoose = require("mongoose");
+const Contact = require("./models/Contact").Contact;
+
+mongoose.connect(process.env.DB + "messageboard?retryWrites=true", {
+  useNewUrlParser: true,
+  useCreateIndex: true,
+});
+const db = mongoose.connection;
+db.on("error", console.error.bind(console, "MongoDB connection error:"));
 
 app.use(helmet());
 app.use(bodyParser.urlencoded({ extended: false }));
