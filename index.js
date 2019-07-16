@@ -1,9 +1,8 @@
 const express = require("express");
 const app = express();
 const bodyParser = require("body-parser");
-const axios = require("axios");
 const helmet = require("helmet");
-const compression = require('compression');
+const compression = require("compression");
 require("dotenv").config();
 
 app.use(helmet());
